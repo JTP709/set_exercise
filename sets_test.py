@@ -4,10 +4,10 @@ from sets import Set, union, intersection, setDifference, relativeCompliment, sy
 class SetTests(unittest.TestCase):
 	def test_add_to_set(self):
 		testSet = Set()
-		testSet.add('A')
+		testSet.add(1)
 		testSet.add('B')
 		testSet.add('C')
-		self.assertTrue(testSet.has('A'))
+		self.assertTrue(testSet.has(1))
 		self.assertTrue(testSet.has('B'))
 		self.assertTrue(testSet.has('C'))
 		self.assertFalse(testSet.has('D'))

@@ -3,25 +3,30 @@ class Set():
 		self.setDictionary = {}
 
 	def add(self, value):
+		if isinstance(value, (int, float, complex)):
+			value = str(value)
 		hashValue = hash(value)
 		self.setDictionary[hashValue] = value
 
 	def remove(self, value):
+		if isinstance(value, (int, float, complex)):
+			value = str(value)
 		hashValue = hash(value)
 		del self.setDictionary[hashValue]
 
 	def has(self, value):
+		if isinstance(value, (int, float, complex)):
+			value = str(value)
 		hashValue = hash(value)
 		return hashValue in self.setDictionary
 
 def union(set_uno, set_dos):
 	return {**set_uno, **set_dos}
 
-def intersection(set_uno, set_duo):
+def intersection(set_uno, set_dos):
 	intersections = {}
-	setUnoKeys = set_uno.keys()
-	for i in setUnoKeys:
-		if i in set_duo:
+	for i in set_uno:
+		if i in set_dos:
 			intersections[i] = set_uno[i]
 	return intersections
 

@@ -16,7 +16,7 @@ def testHasHelper(testObject, testList):
 
 class SetTests(unittest.TestCase):
 	def test_add_to_set(self):
-		testData = (1,'B','C')
+		testData = (1,7.09,'C')
 		testSet = addHelper(testData)
 
 		self.assertTrue(testHasHelper(testSet, testData))

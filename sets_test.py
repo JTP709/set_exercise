@@ -33,7 +33,7 @@ class SetTests(unittest.TestCase):
 		testSetDos.add('E')
 		testSetDos.add('F')
 
-		testUnion = union(testSetUno.setDictionary, testSetDos.setDictionary)
+		testUnion = union(testSetUno.getSet(), testSetDos.getSet())
 		self.assertTrue('A' in testUnion.values())
 		self.assertTrue('B' in testUnion.values())
 		self.assertTrue('C' in testUnion.values())
@@ -52,7 +52,7 @@ class SetTests(unittest.TestCase):
 		testSetDos.add('B')
 		testSetDos.add('F')
 
-		testIntersection = intersection(testSetUno.setDictionary, testSetDos.setDictionary)
+		testIntersection = intersection(testSetUno.getSet(), testSetDos.getSet())
 		self.assertTrue('A' in testIntersection.values())
 		self.assertTrue('B' in testIntersection.values())
 		self.assertFalse('C' in testIntersection.values())
@@ -69,7 +69,7 @@ class SetTests(unittest.TestCase):
 		testSetDos.add('B')
 		testSetDos.add('F')
 
-		testIntersection = setDifference(testSetUno.setDictionary, testSetDos.setDictionary)
+		testIntersection = setDifference(testSetUno.getSet(), testSetDos.getSet())
 		self.assertTrue('C' in testIntersection.values())
 		self.assertTrue('D' in testIntersection.values())
 		self.assertFalse('A' in testIntersection.values())
@@ -86,7 +86,7 @@ class SetTests(unittest.TestCase):
 		testSetDos.add('C')
 		testSetDos.add('D')
 
-		testRelativeCompliment = relativeCompliment(testSetUno.setDictionary, testSetDos.setDictionary)
+		testRelativeCompliment = relativeCompliment(testSetUno.getSet(), testSetDos.getSet())
 		self.assertTrue('C' in testRelativeCompliment.values())
 		self.assertTrue('D' in testRelativeCompliment.values())
 		self.assertFalse('A' in testRelativeCompliment.values())
@@ -104,7 +104,7 @@ class SetTests(unittest.TestCase):
 		testSetDos.add('C')
 		testSetDos.add('D')
 
-		testSymmetricDifference = symmetricDifference(testSetUno.setDictionary, testSetDos.setDictionary)
+		testSymmetricDifference = symmetricDifference(testSetUno.getSet(), testSetDos.getSet())
 		self.assertTrue('E' in testSymmetricDifference.values())
 		self.assertTrue('F' in testSymmetricDifference.values())
 		self.assertTrue('C' in testSymmetricDifference.values())

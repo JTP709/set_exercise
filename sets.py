@@ -20,6 +20,9 @@ class Set():
 		hashValue = hash(value)
 		return hashValue in self.setDictionary
 
+	def getSet(self):
+		return self.setDictionary
+
 def union(set_uno, set_dos):
 	return {**set_uno, **set_dos}
 
